@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="profile-photo">
+            <img src="fotoDicky.jpeg" alt="Profile Photo">
+        </div>
+        <div class="profile-info">
+            <h1>Dicky Descta</h1>
+            <p>Basketball Player & Student</p>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#" data-page="biografi">Biografi</a></li>
+        <li><a href="#" data-page="pendidikan">Pendidikan</a></li>
+        <li><a href="#" data-page="pengalaman">Pengalaman</a></li>
+        <li><a href="#" data-page="keahlian">Keahlian</a></li>
+        <li><a href="#" data-page="publikasi">Publikasi</a></li>
+    </ul>
+</nav>
+
+<section id="content-section">
+    <div class="biodata">
+        <p><strong>NIM:</strong> 2023071033</p>
+        <p><strong>Nama:</strong> Dicky Descta</p>
+        <p><strong>Agama:</strong> Kristen</p>
+        <p><strong>Tanggal Lahir:</strong> 01 Desember 2003</p>
+        <p><strong>Tempat Lahir:</strong> Tangerang</p>
+    </div>
+</section>
+
+<aside>
+    <h3>Hobi:</h3>
+    <ul>
+        <li>Basket</li>
+        <li>Bola</li>
+    </ul>
+</aside>
+
+<footer>
+    <div class="footer-container">
+        <p>Instagram: dickydescta</p>
+        <div class="footer-logo">Profil Dicky Descta</div> 
+    </div>
+    <p>Copyright 2020. All Rights Reserved</p>
+</footer>
+
+<script>
+    const pages = {
+        biografi: `
+            <div class="biodata">
+                <h1>Biodata</h1>
+                <p><strong>NIM:</strong> 2023071033</p>
+                <p><strong>Nama:</strong> Dicky Descta</p>
+                <p><strong>Agama:</strong> Kristen</p>
+                <p><strong>Tanggal Lahir:</strong> 01 Desember 2003</p>
+                <p><strong>Tempat Lahir:</strong> Tangerang</p>
+            </div>
+        `,
+        pendidikan: `
+            <h2>Pendidikan</h2>
+            <p>SD Negeri Jelupang 01</p>
+            <p>SMP Negeri 14 Tangerang Selatan</p>
+            <p>SMA Negeri 7 Tangerang Selatan</p>
+            <p>Informatika - Universitas Pembangunan Jaya</p>
+        `,
+        pengalaman: `
+            <h2>Pengalaman</h2>
+            <p>Mewakili SMAN 7 Tangerang Selatan di DBL Banten</p>
+            <p></p>
+        `,
+        keahlian: `
+            <h2>Keahlian</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>PHP, Python</li>    
+            </ul>
+        `,
+        publikasi: `
+            <h2>Publikasi</h2>
+            <p>Artikel Teknologi di Majalah </p>
+            <p>Penelitian tentang AI di Jurnal </p>
+        `
+    };
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            const page = e.target.getAttribute('data-page'); 
+            document.getElementById('content-section').innerHTML = pages[page]; 
+        });
+    });
+</script>
+
+</body>
+</html>

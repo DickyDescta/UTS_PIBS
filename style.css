@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #184852;
+    padding: 20px; 
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-photo {
+    margin-right: 20px; 
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1f6e7e;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    color: #ffffff; 
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #ffffff; 
+}
+
+nav {
+    background-color: #1f6e7e;
+    padding: 20px;
+}
+
+nav a {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #a9a9a9;
+}
+
+section {
+    padding: 20px;
+    background-color: #184852;
+    color: #ffffff;
+    border: 2px solid #1f6e7e; 
+}
+
+aside {
+    padding: 20px;
+    background-color: #1f6e7e;
+    color: #ffffff;
+}
+
+footer {
+    clear: both;
+    background-color: #184852;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer-logo {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #ffffff;
+}
+
+.biodata {
+    line-height: 1.8;
+}
+
+.biodata strong {
+    display: inline-block;
+    width: 120px;
+}
+
+/* dekstop */
+@media (min-width: 1025px) {
+    nav {
+        width: 25%;
+        float: left;
+        height: 400px;
+    }
+
+    section {
+        width: 50%;
+        float: left;
+        height: 400px;
+    }
+
+    aside {
+        width: 25%;
+        float: left;
+        height: 400px;
+    }
+}
+
+/* tablet landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav {
+        width: 25%;
+        float: left;
+        height: auto;
+    }
+
+    section {
+        width: 75%;
+        float: left;
+        height: auto;
+    }
+
+    aside {
+        width: 100%; 
+        float: none;
+        height: auto;
+    }
+}
+
+/* tablet portrait */
+@media (max-width: 768px) {
+    nav, section, aside {
+        width: 100%;
+        float: none;
+        height: auto;
+    }
+}
+
+/* smartphone */
+@media (max-width: 480px) {
+    nav, section, aside {
+        width: 100%;
+        float: none;
+        height: auto;
+    }
+}
